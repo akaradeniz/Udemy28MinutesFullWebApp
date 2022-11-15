@@ -1,0 +1,6 @@
+<p *ngIf="isLoggedIn">{{errorMessage}}</p>
+
+
+UserName: <input type="text" [(ngModel)]="username">
+Password: <input type="password" [(ngModel)]="password">
+<button (click)="login()" >Submit</button>
