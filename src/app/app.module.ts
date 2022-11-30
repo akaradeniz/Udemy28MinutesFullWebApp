@@ -9,12 +9,13 @@ import { ErrorComponent } from './error/error.component';
 import { ListTodosComponent } from './list-todos/list-todos.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { DatePipe} from '@angular/common';
 
 const routes: Routes=[
   {path:'',component:LoginComponent},
   {path:'login',component: LoginComponent},
   {path:'welcome/:name',component:WelcomeComponent},
-  {path:'listTodos',component:ListTodosComponent},
+  {path:'todos',component:ListTodosComponent},
   {path:'**',component:ErrorComponent}
 ]
 
@@ -32,6 +33,9 @@ const routes: Routes=[
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule
+  ],
+  exports:[
+    DatePipe
   ],
   providers: [],
   bootstrap: [AppComponent]
